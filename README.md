@@ -53,7 +53,7 @@ Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que pos
     -> User: admin@admin.com
     -> Passord: admin
 
-<img src="https://photos.fife.usercontent.google.com/pw/AP1GczNP2VpW9O4NjU-CRzAltcPFL7-XMgOKPBuLmssz_Weuhyy-3x9xSDca=w1710-h962-s-no?authuser=0" width="800" alt="pgAdmin 4">
+![pgadmin4](https://github.com/andrepfdev/teste-motocaSystems-backEnd/assets/49399742/f74ba3dc-fb2d-4a76-bcb8-e7c77a2606bc)
 
 #### Banco de dados:
     DB_HOST=pgsql
@@ -64,9 +64,12 @@ Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que pos
 
 ### Endpoints
     
-`http://localhost/api/produtos`
+```
+http://localhost/api/produtos
 
-`http://localhost/api/categorias`
+http://localhost/api/categorias
+
+```
 
 ## Decisões importantes:
 -[x]  
