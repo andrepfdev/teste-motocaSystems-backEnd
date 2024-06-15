@@ -9,26 +9,26 @@ Este README detalha a aplicação back-end desenvolvida para o desafio de contra
 ### Funcionalidades
 
 #### Entidades:
-    * Produtos
-    * Categorias
+    Produtos
+    Categorias
 
 #### Operações CRUD:    
    ##### Produtos:
-        * Criar
-        * Ler (todos os produtos e por ID)
-        * Atualizar
-        * Deletar
+    Criar
+    Ler (todos os produtos e por ID)
+    Atualizar
+    Deletar
 
    ##### Categorias:
-        * Criar
-        * Ler (todas as categorias e por ID)
-        * Atualizar
-        * Deletar
+    Criar
+    Ler (todas as categorias e por ID)
+    Atualizar
+    Deletar
 
 #### Relacionamento:
 
-    Cada produto pertence a uma categoria (chave estrangeira categoria_id na tabela produtos).
-    Cada categoria pode ter vários produtos.    
+Cada produto pertence a uma categoria (chave estrangeira **categoria_id** na tabela produtos).
+Cada categoria pode ter vários produtos.    
 
 ## Instalação
 
@@ -40,12 +40,32 @@ Para este projeto usou-se Docker Sail
 4.  Execute as migrations do banco de dados: `./vendor/bin/sail artisan migrate`;
 5.  Popule o banco de dados com os dados iniciais: `./vendor/bin/sail artisan db:seed`.
 
-Observe que no arquivo `docker-compose.yml` está configurado, além do PostgreSQL, o gerenciador `pgAdmin4`.
+Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que possui, além do PostgreSQL, o gerenciador `pgAdmin4`.
+
+|  Nº  |   Imagens  |
+|-----:|------------|
+|     1| Laravel 10 |
+|     2| PostgreSQL |
+|     3| pgAdmin4   |
 
 #### pgAdmin4
-    * URL: http:localhost:5050
-    * User: admin@admin.com
-    * Passord: admin
+    -> URL: http:localhost:5050
+    -> User: admin@admin.com
+    -> Passord: admin
+
+![pgAdmin 4](https://drive.google.com/file/d/1NAef-C2ivkt1E4aJZw6LbrXZYMV2xveG) { width:50%; height:auto; }
+
+
+#### Banco de dados:
+    DB_HOST=pgsql
+    DB_PORT=5432
+    DB_DATABASE=laravel
+    DB_USERNAME=sail
+    DB_PASSWORD=password
+
+### Endpoints
+    `http://localhost/api/produtos`
+    `http://localhost/api/categorias`
 
 ## Decisões importantes:
 -[x]  
