@@ -53,7 +53,7 @@ Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que pos
     -> User: admin@admin.com
     -> Passord: admin
 
-<p align="center"><img src="https://photos.fife.usercontent.google.com/pw/AP1GczNP2VpW9O4NjU-CRzAltcPFL7-XMgOKPBuLmssz_Weuhyy-3x9xSDca=w1710-h962-s-no?authuser=0" width="800" alt="pgAdmin 4"></p>
+<img src="https://photos.fife.usercontent.google.com/pw/AP1GczNP2VpW9O4NjU-CRzAltcPFL7-XMgOKPBuLmssz_Weuhyy-3x9xSDca=w1710-h962-s-no?authuser=0" width="800" alt="pgAdmin 4">
 
 #### Banco de dados:
     DB_HOST=pgsql
