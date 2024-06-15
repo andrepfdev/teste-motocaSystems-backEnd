@@ -42,7 +42,7 @@ Para este projeto usou-se Docker Sail
 
 Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que possui, além do PostgreSQL, o gerenciador `pgAdmin4`.
 
-|  Nº  |   Imagens  |
+|  nº  | Imagens    |
 |-----:|------------|
 |     1| Laravel 10 |
 |     2| PostgreSQL |
@@ -53,8 +53,7 @@ Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que pos
     -> User: admin@admin.com
     -> Passord: admin
 
-![pgAdmin 4](https://drive.google.com/file/d/1NAef-C2ivkt1E4aJZw6LbrXZYMV2xveG) { width:50%; height:auto; }
-
+<p align="center"><img src="https://drive.google.com/file/d/1NAef-C2ivkt1E4aJZw6LbrXZYMV2xveG" width="700" alt="pgAdmin 4"></p>
 
 #### Banco de dados:
     DB_HOST=pgsql
