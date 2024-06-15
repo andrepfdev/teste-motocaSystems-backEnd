@@ -9,21 +9,21 @@ Este README detalha a aplicação back-end desenvolvida para o desafio de contra
 ### Funcionalidades
 
 #### Entidades:
-    Produtos
-    Categorias
+- Produtos
+- Categorias
 
 #### Operações CRUD:    
-   ##### Produtos:
-    Criar
-    Ler (todos os produtos e por ID)
-    Atualizar
-    Deletar
-
-   ##### Categorias:
-    Criar
-    Ler (todas as categorias e por ID)
-    Atualizar
-    Deletar
+##### Produtos:
+- Criar
+- Ler (todos os produtos e por ID)
+- Atualizar
+- Deletar
+   
+##### Categorias:
+- Criar
+- Ler (todas as categorias e por ID)
+- Atualizar
+- Deletar
 
 #### Relacionamento:
 
@@ -42,18 +42,18 @@ Para este projeto usou-se Docker Sail
 
 Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que possui, além do PostgreSQL, o gerenciador `pgAdmin4`.
 
-|  nº  | Imagens    |
+|  nº  | Images     |
 |-----:|------------|
 |     1| Laravel 10 |
 |     2| PostgreSQL |
-|     3| pgAdmin4   |
+|     3| pgAdmin 4  |
 
 #### pgAdmin4
-    -> URL: http:localhost:5050
+    -> URL: http://localhost:5050
     -> User: admin@admin.com
     -> Passord: admin
 
-<p align="center"><img src="https://drive.google.com/file/d/1NAef-C2ivkt1E4aJZw6LbrXZYMV2xveG" width="700" alt="pgAdmin 4"></p>
+<p align="center"><img src="https://photos.fife.usercontent.google.com/pw/AP1GczNP2VpW9O4NjU-CRzAltcPFL7-XMgOKPBuLmssz_Weuhyy-3x9xSDca=w1710-h962-s-no?authuser=0" width="800" alt="pgAdmin 4"></p>
 
 #### Banco de dados:
     DB_HOST=pgsql
@@ -63,8 +63,10 @@ Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que pos
     DB_PASSWORD=password
 
 ### Endpoints
-    `http://localhost/api/produtos`
-    `http://localhost/api/categorias`
+    
+`http://localhost/api/produtos`
+
+`http://localhost/api/categorias`
 
 ## Decisões importantes:
 -[x]  
