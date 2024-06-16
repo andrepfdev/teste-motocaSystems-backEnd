@@ -81,39 +81,52 @@ Link para o arquivo de testes: <a href="https://drive.google.com/file/d/1kvp6Ztr
 
 ### Models
 Foram definidos os models:
-    - Category
-    - Product
+```
+ - Category
+ - Product
+```
 Onde em Category existe a função `products` que possibilita a relação um para muitos (`hasMany`). E em Product, há a função `category`, estabelecendo a relação `belongsTo`, possibilitando a relação entre o produto e a categoria.
 
 ### Migrations
 As migrations para Categorias e Produtos foram definidas usando apenas o essencial proposto no desafio, organizado e claro para que se possa fazer alterações sem perda de produtividade.
-    - create_categories_table
-    - create_products_table
+
+ - create_categories_table
+ - create_products_table
 
 ### Seeders
 Para popular o banco de dados corretamente e possibilitar usar e entender melhor como este projeto funciona, seeders foram criados:
-    - CategorySeeder
-    - ProductSeeder
+
+ - CategorySeeder
+ - ProductSeeder
 
 ### Controllers
 Há dois controllers, sendo eles:
-    - CategoryController
-    - ProductController
+
+ - CategoryController
+ - ProductController
+
 Na branch **master** as regras estão definidas no controller, enquanto que na branch **dev** as regras estão em Services.
 
 ### Routes
 Seguindo a documentação Laravel 10, optou-se por definir as rotas da seguinte maneira:
-    Route::apiResource('/produtos',ProductController::class);
-    Route::apiResource('/categorias', CategoryController::class);
+
+ Route::apiResource('/produtos',ProductController::class);
+ Route::apiResource('/categorias', CategoryController::class);
+
 Desta forma, além do código fica mais simples e produtivo, apiResource se encarrega de devolver o status code correto para cada requisição solicitada.
 
 ### Requests
 Para facilicar o processo de validação dos dados, usou-se requests, sendo eles:
-    - StoreCategoryRequest
-    - StoreProductRequest
+
+ - StoreCategoryRequest
+ - StoreProductRequest
 
 ### API Resources
-Como sugere a documentação do Laravel, usou-e API Resources para que os modelos do Eloquent trabalhe com as respostas JSON de forma mais acertiva. 
-    - CategoryResource
-    - ProductResource
+Como sugere a documentação do Laravel, usou-e API Resources para que os modelos do Eloquent trabalhe com as respostas JSON de forma mais acertiva.
 
+ - CategoryResource
+ - ProductResource
+
+Fico feliz em ter participado deste processo seletivo. Meus números de contato são: (98) 98569-4325 e (99) 99193-2001
+
+Tenho bastante vontade de aprender mais. Desejo trabalhar com uma equipe que me ajude a crescer na área. Aceito, inclusive, vaga de estágio.
