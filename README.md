@@ -110,8 +110,8 @@ Na branch **master** as regras estão definidas no controller, enquanto que na b
 ### Routes
 Seguindo a documentação Laravel 10, optou-se por definir as rotas da seguinte maneira:
 
- Route::apiResource('/produtos',ProductController::class);
- Route::apiResource('/categorias', CategoryController::class);
+ `Route::apiResource('/produtos',ProductController::class);`
+ `Route::apiResource('/categorias', CategoryController::class);`
 
 Desta forma, além do código fica mais simples e produtivo, apiResource se encarrega de devolver o status code correto para cada requisição solicitada.
 
