@@ -114,7 +114,7 @@ Seguindo a documentação Laravel 10, optou-se por definir as rotas da seguinte 
  
  `Route::apiResource('/categorias', CategoryController::class);`
 
-Desta forma, além do código fica mais simples e produtivo, apiResource se encarrega de devolver o status code correto para cada requisição solicitada.
+Desta forma, além do código ficar mais simples e produtivo, apiResource se encarrega de devolver o status code correto para cada requisição solicitada.
 
 ### Requests
 Para facilicar o processo de validação dos dados, usou-se requests, sendo eles:
