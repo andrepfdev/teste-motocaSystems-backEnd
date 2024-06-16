@@ -71,6 +71,49 @@ http://localhost/api/produtos
 http://localhost/api/categorias
 ```
 
-## Decisões importantes:
--[x]  
+## Postman Teste
+
+![postman doc](https://github.com/andrepfdev/teste-motocaSystems-backEnd/assets/49399742/7d46c864-acb8-4c62-92e2-c4248f18b9ef)
+
+Link para o arquivo de testes: <a href="https://drive.google.com/file/d/1kvp6Ztr2UTurF2-JYouufn83pWGMgyax/view?usp=sharing" target="_blank"> Download </a>
+
+## Observações sobre o projeto:
+
+### Models
+Foram definidos os models:
+    - Category
+    - Product
+Onde em Category existe a função `products` que possibilita a relação um para muitos (`hasMany`). E em Product, há a função `category`, estabelecendo a relação `belongsTo`, possibilitando a relação entre o produto e a categoria.
+
+### Migrations
+As migrations para Categorias e Produtos foram definidas usando apenas o essencial proposto no desafio, organizado e claro para que se possa fazer alterações sem perda de produtividade.
+    - create_categories_table
+    - create_products_table
+
+### Seeders
+Para popular o banco de dados corretamente e possibilitar usar e entender melhor como este projeto funciona, seeders foram criados:
+    - CategorySeeder
+    - ProductSeeder
+
+### Controllers
+Há dois controllers, sendo eles:
+    - CategoryController
+    - ProductController
+Na branch **master** as regras estão definidas no controller, enquanto que na branch **dev** as regras estão em Services.
+
+### Routes
+Seguindo a documentação Laravel 10, optou-se por definir as rotas da seguinte maneira:
+    Route::apiResource('/produtos',ProductController::class);
+    Route::apiResource('/categorias', CategoryController::class);
+Desta forma, além do código fica mais simples e produtivo, apiResource se encarrega de devolver o status code correto para cada requisição solicitada.
+
+### Requests
+Para facilicar o processo de validação dos dados, usou-se requests, sendo eles:
+    - StoreCategoryRequest
+    - StoreProductRequest
+
+### API Resources
+Como sugere a documentação do Laravel, usou-e API Resources para que os modelos do Eloquent trabalhe com as respostas JSON de forma mais acertiva. 
+    - CategoryResource
+    - ProductResource
 
