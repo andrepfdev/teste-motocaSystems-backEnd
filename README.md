@@ -4,7 +4,7 @@
 # Teste Motoca BackEnd
 ## API Laravel 10
 
-Este README detalha a aplicação back-end desenvolvida para o desafio de contratação da Motoca Systems, na vaga de Desenvolvedor Back-End. A aplicação segue as especificações fornecidas, utilizando Laravel e PostgreSQL para implementar uma API CRUD para as entidades "Produtos" e "Categorias".
+Este README detalha a aplicação back-end desenvolvida para o desafio de contratação da Motoca Systems, na vaga de Desenvolvedor Back-End. A aplicação segue as especificações fornecidas, utilizando Laravel e PostgreSQL para implementar uma **API CRUD** para as entidades "Produtos" e "Categorias".
 
 ### Funcionalidades
 
@@ -32,13 +32,14 @@ Cada categoria pode ter vários produtos.
 
 ## Instalação
 
-Para este projeto usou-se Docker Sail
+Para este projeto usou-se **Docker Sail**
 
 1.  Clone este repositório: `git clone https://github.com/andrepfdev/teste-motocaSystems-backEnd`;
 2.  Entre no diretório do projeto localmente: `cd teste-motocaSystems-backEnd`;
-3.  Incie o ambiente Docker com o comando: `./vendor/bin/sail up`;
-4.  Execute as migrations do banco de dados: `./vendor/bin/sail artisan migrate`;
-5.  Popule o banco de dados com os dados iniciais: `./vendor/bin/sail artisan db:seed`.
+3.  Instale as dependências do projeto: `composer install`;
+4.  Incie o ambiente Docker com o comando: `./vendor/bin/sail up -d`;
+5.  Execute as migrations do banco de dados: `./vendor/bin/sail artisan migrate`;
+6.  Popule o banco de dados com os dados iniciais: `./vendor/bin/sail artisan db:seed`.
 
 Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que possui, além do PostgreSQL, o gerenciador `pgAdmin4`.
 
@@ -68,7 +69,6 @@ Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que pos
 http://localhost/api/produtos
 
 http://localhost/api/categorias
-
 ```
 
 ## Decisões importantes:
