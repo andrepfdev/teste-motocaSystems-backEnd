@@ -105,7 +105,7 @@ Há dois controllers, sendo eles:
  - CategoryController
  - ProductController
 
-Na branch **master** as regras estão definidas no controller, enquanto que na branch **dev** as regras estão em Services.
+Na branch **master** as regras estão definidas no controller, mas, entendo que poderia ter sido diferente.
 
 ### Routes
 Seguindo a documentação Laravel 10, optou-se por definir as rotas da seguinte maneira:
