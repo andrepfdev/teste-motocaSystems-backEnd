@@ -107,6 +107,10 @@ Há dois controllers, sendo eles:
 
 Na branch **master** as regras estão definidas no controller, mas, entendo que poderia ter sido diferente.
 
+### Paginate
+Existe uma paginação simples tanto em Categorias quanto para Produtos, mas pode ser alterado para uma paginação completa alterando os controllers.
+Para a alteração em ambos métodos index, muda-se `simplePaginate()` para `paginate()`.
+
 ### Routes
 Seguindo a documentação Laravel 10, optou-se por definir as rotas da seguinte maneira:
 
