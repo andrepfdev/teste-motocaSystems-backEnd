@@ -4,7 +4,7 @@
 # Teste Motoca BackEnd
 ## API Laravel 10
 
-Este README detalha a aplicação back-end desenvolvida para o desafio de contratação da Motoca Systems, na vaga de Desenvolvedor Back-End. A aplicação segue as especificações fornecidas, utilizando Laravel e PostgreSQL para implementar uma **API CRUD** para as entidades "Produtos" e "Categorias". Observe a existência de duas branchs.
+Este README detalha a aplicação back-end desenvolvida para o desafio de contratação da Motoca Systems, na vaga de Desenvolvedor Back-End. A aplicação segue as especificações fornecidas, utilizando Laravel e PostgreSQL para implementar uma **API CRUD** para as entidades "Produtos" e "Categorias". Observe a existência de duas branchs, em especial a **branch dev**.
 
 ### Funcionalidades
 
