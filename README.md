@@ -36,10 +36,11 @@ Para este projeto usou-se **Docker Sail**
 
 1.  Clone este repositório: `git clone https://github.com/andrepfdev/teste-motocaSystems-backEnd`;
 2.  Entre no diretório do projeto localmente: `cd teste-motocaSystems-backEnd`;
-3.  Instale as dependências do projeto: `composer install`;
-4.  Incie o ambiente Docker com o comando: `./vendor/bin/sail up -d`;
-5.  Execute as migrations do banco de dados: `./vendor/bin/sail artisan migrate`;
-6.  Popule o banco de dados com os dados iniciais: `./vendor/bin/sail artisan db:seed`.
+3.  Instale as dependências do projeto: `composer install`; Talvez precise rodar primeiro: `composer update`;
+4.  Configure o arquivo **`.env`** com as informaçẽos de banco de dados que informei abaixo;
+5.  Incie o ambiente Docker com o comando: `./vendor/bin/sail up -d`;
+6.  Execute as migrations do banco de dados: `./vendor/bin/sail artisan migrate`;
+7.  Popule o banco de dados com os dados iniciais: `./vendor/bin/sail artisan db:seed`.
 
 Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que possui, além do PostgreSQL, o gerenciador `pgAdmin4`.
 
@@ -57,6 +58,7 @@ Observe os dados configurados nos arquivos `docker-compose.yml` e `.env` que pos
 ![pgadmin4](https://github.com/andrepfdev/teste-motocaSystems-backEnd/assets/49399742/f74ba3dc-fb2d-4a76-bcb8-e7c77a2606bc)
 
 #### Banco de dados:
+    DB_CONNECTION=pgsql
     DB_HOST=pgsql
     DB_PORT=5432
     DB_DATABASE=laravel
