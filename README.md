@@ -4,7 +4,7 @@
 # Teste Motoca BackEnd
 ## API Laravel 10
 
-Este README detalha a aplicação back-end desenvolvida para o desafio de contratação da Motoca Systems, na vaga de Desenvolvedor Back-End. A aplicação segue as especificações fornecidas, utilizando Laravel e PostgreSQL para implementar uma **API CRUD** para as entidades "Produtos" e "Categorias".
+Este README detalha a aplicação back-end desenvolvida para o desafio de contratação da Motoca Systems, na vaga de Desenvolvedor Back-End. A aplicação segue as especificações fornecidas, utilizando Laravel e PostgreSQL para implementar uma **API CRUD** para as entidades "Produtos" e "Categorias". Observe a existência de duas branchs.
 
 ### Funcionalidades
 
@@ -107,7 +107,7 @@ Há dois controllers, sendo eles:
  - CategoryController
  - ProductController
 
-Na branch **master** as regras estão definidas no controller, mas, entendo que poderia ter sido diferente.
+Na branch **master** as regras estão definidas no controller, contudo, na branch **dev** houve separação da lógica para **Services**.
 
 ### Paginate
 Existe uma paginação simples tanto em Categorias quanto para Produtos, mas pode ser alterado para uma paginação completa alterando os controllers.
