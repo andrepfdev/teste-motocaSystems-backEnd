@@ -79,6 +79,8 @@ http://localhost/api/categorias
 
 Link para o arquivo de testes: <a href="https://drive.google.com/file/d/1kvp6Ztr2UTurF2-JYouufn83pWGMgyax/view?usp=sharing" target="_blank"> Download </a>
 
+Documento Postman: <a href="https://documenter.getpostman.com/view/28415815/2sA3XQiN8G" target="_blank">Clique aqui.</a>
+
 ## Observações sobre o projeto:
 
 ### Models
