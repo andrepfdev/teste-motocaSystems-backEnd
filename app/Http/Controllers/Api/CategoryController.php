@@ -4,17 +4,23 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreCategoryRequest;
-use App\Models\Category;
-use App\Http\Resources\CategoryResource;
+use App\Services\CategoryService;
 
 class CategoryController extends Controller
 {
+    protected $categoryService;
+
+    public function __construct(CategoryService $categoryService)
+    {
+        $this->categoryService = $categoryService;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return CategoryResource::collection(Category::with('produtcs')->simplePaginate());
+        return $this->categoryService->getAllCategories();
     }
 
     /**
@@ -22,9 +28,7 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        $category = Category::create($request->validated());
-
-        return new CategoryResource($category);
+        return $this->categoryService->createCategory($request);
     }
 
     /**
@@ -32,9 +36,7 @@ class CategoryController extends Controller
      */
     public function show(string $id)
     {
-        $category = Category::findOrFail($id);
-        
-        return new CategoryResource($category);
+        return $this->categoryService->getCategoryById($id);
     }
 
     /**
@@ -42,11 +44,7 @@ class CategoryController extends Controller
      */
     public function update(StoreCategoryRequest $request, string $id)
     {
-        $category = Category::find($id);
-
-        $category->update($request->validated());
-
-        return new CategoryResource($category);
+        return $this->categoryService->updateCategory($request, $id);
     }
 
     /**
@@ -54,6 +52,6 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        return Category::destroy($id);
+        return $this->categoryService->deleteCategory($id);
     }
 }

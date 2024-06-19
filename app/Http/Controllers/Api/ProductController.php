@@ -4,17 +4,23 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreProductRequest;
-use App\Http\Resources\ProductResource;
-use App\Models\Product;
+use App\Services\ProductService;
 
 class ProductController extends Controller
 {
+    protected $productService;
+
+    public function __construct(ProductService $productService)
+    {
+        $this->productService = $productService;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return ProductResource::collection(Product::with('category')->simplePaginate());
+        return $this->productService->getAllProducts();
     }
 
     /**
@@ -22,9 +28,7 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        $product = Product::create($request->validated());
-    
-        return new ProductResource($product);
+        return $this->productService->createProduct($request);
     }
 
     /**
@@ -32,9 +36,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        $product = Product::with('category')->find($id);
-
-        return new ProductResource($product);
+        return $this->productService->getProductById($id);
     }
 
     /**
@@ -42,11 +44,7 @@ class ProductController extends Controller
      */
     public function update(StoreProductRequest $request, string $id)
     {
-        $product = Product::with('category')->find($id);
-
-        $product->update($request->validated());
-
-        return new ProductResource($product);
+        return $this->productService->updateProduct($request, $id);
     }
 
     /**
@@ -54,6 +52,6 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        return Product::destroy($id);
+        return $this->productService->deleteProduct($id);
     }
 }
