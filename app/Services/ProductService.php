@@ -8,31 +8,31 @@ use App\Http\Resources\ProductResource;
 
 class ProductService
 {
-    public function getAllProducts()
+    public function list()
     {
         return ProductResource::collection(Product::with('category')->simplePaginate());
     }
 
-    public function createProduct(StoreProductRequest $request)
+    public function create(StoreProductRequest $request)
     {
         $product = Product::create($request->validated());
         return new ProductResource($product);
     }
 
-    public function getProductById(string $id)
+    public function show(string $id)
     {
         $product = Product::with('category')->findOrFail($id);
         return new ProductResource($product);
     }
 
-    public function updateProduct(StoreProductRequest $request, string $id)
+    public function update(StoreProductRequest $request, string $id)
     {
         $product = Product::with('category')->findOrFail($id);
         $product->update($request->validated());
         return new ProductResource($product);
     }
 
-    public function deleteProduct(string $id)
+    public function delete(string $id)
     {
         return Product::destroy($id);
     }

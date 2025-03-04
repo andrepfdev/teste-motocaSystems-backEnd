@@ -20,7 +20,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return $this->categoryService->getAllCategories();
+        return $this->categoryService->list();
     }
 
     /**
@@ -28,7 +28,7 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        return $this->categoryService->createCategory($request);
+        return $this->categoryService->create($request);
     }
 
     /**
@@ -36,7 +36,7 @@ class CategoryController extends Controller
      */
     public function show(string $id)
     {
-        return $this->categoryService->getCategoryById($id);
+        return $this->categoryService->show($id);
     }
 
     /**
@@ -44,7 +44,7 @@ class CategoryController extends Controller
      */
     public function update(StoreCategoryRequest $request, string $id)
     {
-        return $this->categoryService->updateCategory($request, $id);
+        return $this->categoryService->update($request, $id);
     }
 
     /**
@@ -52,6 +52,6 @@ class CategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        return $this->categoryService->deleteCategory($id);
+        return $this->categoryService->delete($id);
     }
 }

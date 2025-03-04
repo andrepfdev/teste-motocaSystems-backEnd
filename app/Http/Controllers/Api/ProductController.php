@@ -20,7 +20,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return $this->productService->getAllProducts();
+        return $this->productService->list();
     }
 
     /**
@@ -28,7 +28,7 @@ class ProductController extends Controller
      */
     public function store(StoreProductRequest $request)
     {
-        return $this->productService->createProduct($request);
+        return $this->productService->create($request);
     }
 
     /**
@@ -36,7 +36,7 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        return $this->productService->getProductById($id);
+        return $this->productService->show($id);
     }
 
     /**
@@ -44,7 +44,7 @@ class ProductController extends Controller
      */
     public function update(StoreProductRequest $request, string $id)
     {
-        return $this->productService->updateProduct($request, $id);
+        return $this->productService->update($request, $id);
     }
 
     /**
@@ -52,6 +52,6 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        return $this->productService->deleteProduct($id);
+        return $this->productService->delete($id);
     }
 }
